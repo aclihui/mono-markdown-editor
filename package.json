@@ -1,6 +1,8 @@
 {
   "name": "mono-markdown-editor",
-  "version": "0.1.0",
+  "version": "0.1.1",
+  "author": "jixwang@thoughtwork.com",
+  "description":"方便的markdown编辑器",
   "private": true,
   "main": "./public/electron.js",
   "homepage": "./",
@@ -17,6 +19,7 @@
   },
   "devDependencies": {
     "electron": "^2.0.5",
+    "electron-builder": "^20.22.0",
     "element-react": "^1.4.20",
     "element-theme-default": "^1.4.13",
     "github-markdown-css": "^2.10.0",
