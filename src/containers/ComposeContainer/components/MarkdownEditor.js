@@ -35,7 +35,7 @@ class MarkdownEditor extends Component{
         return (
             <div className="mono-markdown-editor">
                 <textarea
-                    placeholder="在这里写Markdown"
+                    placeholder="在这里写Markdown，支持粘贴剪贴板中的图片"
                     onChange={event => {this.handleInputChange(event)}}
                     onPaste={event => {this.handlePaste(event)}}
                     value={this.state.valueOfEditor}></textarea>

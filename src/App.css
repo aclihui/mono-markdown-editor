@@ -19,8 +19,6 @@ p{
 }
 .mono-markdown-previewer{
   line-height: 1.5;
-  overflow-y: scroll;
-
 }
 .mono-markdown-previewer div{
   width: 100%;
