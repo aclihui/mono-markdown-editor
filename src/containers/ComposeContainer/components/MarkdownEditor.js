@@ -3,7 +3,7 @@ import {store} from "../../../store";
 import {updateMarkdownString} from "../actions";
 import AV from "leancloud-storage";
 import _ from "lodash";
-
+import { Message } from 'element-react';
 class MarkdownEditor extends Component{
     constructor(props){
         super(props);
@@ -21,13 +21,15 @@ class MarkdownEditor extends Component{
         if(pasteItem.kind==="file"){
             let sourceFile = pasteItem.getAsFile();
             let file = new AV.File("名字随便取.jpg",sourceFile);//名字随便取
+            Message("请稍等，正在上传图片");
             file.save().then(file=>{
                 const templateMarkdownImageText = `![image](${file.attributes.url})`
                 let currentMarkdownString = store.getState().markdownString + templateMarkdownImageText;
                 store.dispatch(updateMarkdownString(currentMarkdownString));
                 this.setState({valueOfEditor:currentMarkdownString});
             },error=>{
-                console.log(error)
+                console.log(error);
+                Message.error(`发生了错误:${error}`)
             })
         }
     }

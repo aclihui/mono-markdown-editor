@@ -5,6 +5,7 @@
   "main": "./public/electron.js",
   "homepage": "./",
   "dependencies": {
+    "element-theme-default": "^1.4.13"
   },
   "scripts": {
     "start-electron": "NODE_ENV=development electron .",
@@ -16,6 +17,8 @@
   },
   "devDependencies": {
     "electron": "^2.0.5",
+    "element-react": "^1.4.20",
+    "element-theme-default": "^1.4.13",
     "github-markdown-css": "^2.10.0",
     "leancloud-storage": "^3.8.1",
     "lodash": "^4.17.10",
