@@ -1,28 +1,48 @@
-.App {
-  text-align: center;
+p{
+  margin: 0;
+}
+.mono{
+  display: flex;
+  font-family: Roboto,"Helvetica Neue","Segoe UI",Verdana,Tahoma,"Hiragino Sans GB","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;
+}
+.mono-markdown-editor,.mono-markdown-previewer{
+  float: left;
+  width: 50%;
+  height: 100vh;
+  max-height: 100vh;
+  padding: 1rem;
+
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.mono-markdown-editor{
+  border-right:1px solid #ccc;
+}
+.mono-markdown-previewer{
+  line-height: 1.5;
+  overflow-y: scroll;
+
+}
+.mono-markdown-previewer div{
+  width: 100%;
+}
+.mono-markdown-previewer div *{
+  word-wrap: break-word;
+}
+.mono-markdown-previewer div img{
+  display: block;
+  max-width: 90%;
+  margin: 1rem auto;
+  border:1px solid #eee;
+  border-radius: 4px;
+  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.12);
+}
+.mono-markdown-editor textarea{
+  width: 100%;
+  height: 100vh;
+  border: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  resize: none;
+  outline: none;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
-}
-
-.App-title {
-  font-size: 1.5em;
-}
-
-.App-intro {
-  font-size: large;
-}
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}

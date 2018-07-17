@@ -1,8 +1,11 @@
 import React,{Component} from "react";
 import MDReactComponent from 'markdown-react-js';
 import {store} from "../../../store";
-let markdownString = "";
-
+const TAGS = {
+    html: 'div', // root node, replaced by default
+    strong: 'b',
+    em: 'i'
+}
 class Previewer extends Component{
     constructor(props){
         super(props);
@@ -13,8 +16,8 @@ class Previewer extends Component{
     }
     render(){
         return (
-            <div className="mono-markdown-previewer">
-                <MDReactComponent text={this.state.markdownString} />
+            <div className="mono-markdown-previewer markdown-body">
+                <MDReactComponent text={this.state.markdownString} tags={TAGS}/>
             </div>
         )
     }

@@ -5,7 +5,7 @@ import Previewer from "./components/Previewer";
 class ComposeContainer extends Component{
     render(){
         return (
-            <div>
+            <div className="mono">
                 <MarkdownEditor/>
                 <Previewer/>
             </div>
