@@ -13,3 +13,4 @@
 0.2版本计划加入代码高亮
 
 ### 下载
+[0.1.0 mac版本](https://github.com/imwangji/mono-markdown-editor/blob/master/dmg_and_exe/mono-markdown-editor-0.1.0.dmg)
